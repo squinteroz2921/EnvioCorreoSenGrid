@@ -5,6 +5,7 @@ public class MailE {
     private String subject;
     private String content;
     private String emailTo;
+    private String apiKey;
 
     public String getFromEmail() {
         return fromEmail;
@@ -38,6 +39,14 @@ public class MailE {
         this.emailTo = emailTo;
     }
 
+    public String getApiKey() {
+        return apiKey;
+    }
+
+    public void setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+    }
+
     @Override
     public String toString() {
         return "MailE{" +
@@ -45,6 +54,7 @@ public class MailE {
                 ", subject='" + subject + '\'' +
                 ", content='" + content + '\'' +
                 ", emailTo='" + emailTo + '\'' +
+                ", apiKey='" + apiKey + '\'' +
                 '}';
     }
 }

@@ -25,7 +25,8 @@ public class SendEmailService {
         Content content = new Content("text/plain", mailE.getContent());
         Mail  mail= new Mail(from, mailE.getSubject(), to, content);
 //        SendGrid sendGrid = new SendGrid("sengrid.api.key");
-        SendGrid sendGrid= new SendGrid(System.getenv("SENGRID_API_KEY"));
+//        SendGrid sendGrid= new SendGrid(System.getenv("SENGRID_API_KEY"));
+        SendGrid sendGrid= new SendGrid(mailE.getApiKey());
         Request request = new Request();
         System.out.println("ya lei las variables");
         System.out.println(mailE.toString());
