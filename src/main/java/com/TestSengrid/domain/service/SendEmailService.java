@@ -21,7 +21,7 @@ public class SendEmailService {
     private static final Logger logger = LoggerFactory.getLogger(SendEmailService.class);
     public String sendEmail(MailE mailE) throws IOException {
         Email from = new Email(mailE.getFromEmail());
-        Email to = new Email(mailE.getFromEmail());
+        Email to = new Email(mailE.getEmailTo());
         Content content = new Content("text/plain", mailE.getContent());
         Mail  mail= new Mail(from, mailE.getSubject(), to, content);
 //        SendGrid sendGrid = new SendGrid("sengrid.api.key");
